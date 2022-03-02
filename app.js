@@ -17,12 +17,10 @@ function quadraticValue() {
   if (a === "" || b === "" || c === "")
     document.getElementById("e-text").innerHTML = "❌ Fill All 3 Boxes";
   else {
-
     //value of a is 0
     if (a == 0)
       document.getElementById("e-text").innerHTML =
         "❌ Error coefficient of x<sup>2</sup> should be >0";
-        
     //no errors
     else calculateRoot();
   }
@@ -72,8 +70,8 @@ function calculateRoot() {
     let imagPart = (Math.sqrt(-d) / (2 * a)).toFixed(2);
 
     // result
-    root1 = realPart + imagPart;
-    root2 = realPart - imagPart;
+    root1 = `${realPart} + ${imagPart}i`;
+    root2 = `${realPart} - ${imagPart}i`;
 
     displayRoot();
   }
